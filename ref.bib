@@ -1,0 +1,558 @@
+% общая глубоко прописанная информация про работу с тензорами, что это в целом такое и про декомпозицию
+@BOOK{tensor_decompositions_for_data_science,
+    author = {Grey Ballard and Tamara G. Kolda},
+    title = {Tensor Decompositions for Data Science},
+    url = {https://www.mathsci.ai/post/tensor-textbook/},  
+    note = {Preliminary draft copy. Accessed on: October 4, 2024,},
+    year = {2024},
+    month = {08},
+    publisher = {}
+}
+
+% применение CNN к классификации EEG, взято как пример тензорной задачи, в которую можно попробовать внедрить декомпозицию
+@INPROCEEDINGS{cnn_eeg,
+  author={Nasybullin, Albert and Kurkin, Semen},
+  booktitle={2021 5th Scientific School Dynamics of Complex Networks and their Applications (DCNA)}, 
+  title={Convolutional Neural Network and Adversarial Autoencoder in EEG images classification}, 
+  year={2021},
+  volume={},
+  number={},
+  pages={139-142},
+  doi={10.1109/DCNA53427.2021.9586891}
+}
+
+% общая глубоко прописанная информация про работу с тензорами, что это в целом такое и про декомпозицию
+% https://github.com/Innopolis-tensor-compression/master-thesis-docs/blob/main/references/tensor-computation-for-data-analysis-1st-ed-2022-3030743853-9783030743857_compress.pdf
+@book{tensor_computation_for_data_analysis,
+author = {Liu, Yipeng and Liu, Jiani and Long, Zhen and Zhu, Ce},
+publisher = {Springer Cham},
+year = {2022},
+month = {01},
+pages = {},
+title = {Tensor Computation for Data Analysis},
+isbn = {978-3-030-74385-7},
+doi = {10.1007/978-3-030-74386-4}
+}
+
+% сравнение различных реализаций тензорной декомпозиции с помощью разных инструментов, на основе этой работы было проделано сравнение библиотек и их анализ по качественным показателям
+@article{tensor_software_landscape,
+  author       = {Christos Psarras and
+                  Lars Karlsson and
+                  Paolo Bientinesi},
+  title        = {The landscape of software for tensor computations},
+  journal      = {CoRR},
+  volume       = {abs/2103.13756},
+  year         = {2021},
+  url          = {https://arxiv.org/abs/2103.13756},
+  eprinttype    = {arXiv},
+  eprint       = {2103.13756},
+  timestamp    = {Wed, 07 Apr 2021 15:31:46 +0200},
+  biburl       = {https://dblp.org/rec/journals/corr/abs-2103-13756.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+
+% Общая информация по ЭЭГ, как ссылка для обзора что это вообще такое
+@article{EEG_analysis_categorization,
+title = {Analysis of Electroencephalography (EEG) Signals and Its Categorization–A Study},
+journal = {Procedia Engineering},
+volume = {38},
+pages = {2525-2536},
+year = {2012},
+note = {INTERNATIONAL CONFERENCE ON MODELLING OPTIMIZATION AND COMPUTING},
+issn = {1877-7058},
+doi = {https://doi.org/10.1016/j.proeng.2012.06.298},
+url = {https://www.sciencedirect.com/science/article/pii/S1877705812022114},
+author = {J. Satheesh Kumar and P. Bhuvaneswari},
+keywords = {Electroencephalography, brain signal, modality, brain states}
+}
+
+% Про то как можно декомпозировать слои у нейронок, как одна из задач над которой можно поэксперементировать
+@article{stable_low_rank_tensor_decomposition,
+  author       = {Anh Huy Phan and
+                  Konstantin Sobolev and
+                  Konstantin Sozykin and
+                  Dmitry Ermilov and
+                  Julia Gusak and
+                  Petr Tichavsk{\'{y}} and
+                  Valeriy Glukhov and
+                  Ivan V. Oseledets and
+                  Andrzej Cichocki},
+  title        = {Stable Low-rank Tensor Decomposition for Compression of Convolutional Neural Network},
+  journal      = {CoRR},
+  volume       = {abs/2008.05441},
+  year         = {2020},
+  url          = {https://arxiv.org/abs/2008.05441},
+  eprinttype    = {arXiv},
+  eprint       = {2008.05441},
+  timestamp    = {Wed, 01 Sep 2021 17:26:23 +0200},
+  biburl       = {https://dblp.org/rec/journals/corr/abs-2008-05441.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+
+% фундаментальная инфа по svd
+@article{golub_reinsch_svd,
+  author    = {Golub, G. H. and Reinsch, C.},
+  title     = {Singular value decomposition and least squares solutions},
+  journal   = {Numerische Mathematik},
+  volume    = {14},
+  number    = {5},
+  pages     = {403--420},
+  year      = {1970},
+  doi       = {10.1007/BF02163027},
+  url       = {https://doi.org/10.1007/BF02163027}
+}
+
+% фундаментальная инфа по tsvd (уже тензоры, а не матрицы)
+@article{tsvd,
+author = {Kilmer, Misha E. and Braman, Karen and Hao, Ning and Hoover, Randy C.},
+title = {Third-Order Tensors as Operators on Matrices: A Theoretical and Computational Framework with Applications in Imaging},
+journal = {SIAM Journal on Matrix Analysis and Applications},
+volume = {34},
+number = {1},
+pages = {148-172},
+year = {2013},
+doi = {10.1137/110837711},
+URL = {https://doi.org/10.1137/110837711},
+eprint = {https://doi.org/10.1137/110837711}
+}
+
+% T3F папира - либа для декомпозиции, использованная в бэнчмарке
+@article{t3f_main,
+  author  = {Alexander Novikov and Pavel Izmailov and Valentin Khrulkov and Michael Figurnov and Ivan Oseledets},
+  title   = {Tensor Train Decomposition on TensorFlow (T3F)},
+  journal = {Journal of Machine Learning Research},
+  year    = {2020},
+  volume  = {21},
+  number  = {30},
+  pages   = {1--7},
+  url     = {http://jmlr.org/papers/v21/18-008.html}
+}
+
+% TensorLy папира - либа для декомпозиции, использованная в бэнчмарке
+@article{tensorly_main,
+  author  = {Jean Kossaifi and Yannis Panagakis and Anima Anandkumar and Maja Pantic},
+  title   = {TensorLy: Tensor Learning in Python},
+  journal = {Journal of Machine Learning Research},
+  year    = {2019},
+  volume  = {20},
+  number  = {26},
+  pages   = {1--6},
+  url     = {http://jmlr.org/papers/v20/18-277.html}
+}
+
+% SciPy библиотека
+@article{scipy_main,
+  author    = {Virtanen, Pauli and Gommers, Ralf and Oliphant, Travis E. and Haberland, Matt and Reddy, Tyler and Cournapeau, David and Burovski, Evgeni and Peterson, Pearu and Weckesser, Warren and Bright, Jonathan and van der Walt, Stéfan J. and Brett, Matthew and Wilson, Joshua and Millman, K. Jarrod and Mayorov, Nikolay and Nelson, Andrew R. J. and Jones, Eric and Kern, Robert and Larson, Eric and Carey, C. J. and Polat, İlhan and Feng, Yu and Moore, Eric W. and VanderPlas, Jake and Laxalde, Denis and Perktold, Josef and Cimrman, Robert and Henriksen, Ian and Quintero, E. A. and Harris, Charles R. and Archibald, Anne M. and Ribeiro, Antônio H. and Pedregosa, Fabian and van Mulbregt, Paul and Vijaykumar, Aditya and Bardelli, Alessandro Pietro and Rothberg, Alex and Hilboll, Andreas and Kloeckner, Andreas and Scopatz, Anthony and Lee, Antony and Rokem, Ariel and Woods, C. Nathan and Fulton, Chad and Masson, Charles and Häggström, Christian and Fitzgerald, Clark and Nicholson, David A. and Hagen, David R. and Pasechnik, Dmitrii V. and Olivetti, Emanuele and Martin, Eric and Wieser, Eric and Silva, Fabrice and Lenders, Felix and Wilhelm, Florian and Young, G. and Price, Gavin A. and Ingold, Gert-Ludwig and Allen, Gregory E. and Lee, Gregory R. and Audren, Hervé and Probst, Irvin and Dietrich, Jörg P. and Silterra, Jacob and Webber, James T. and Slavič, Janko and Nothman, Joel and Buchner, Johannes and Kulick, Johannes and Schönberger, Johannes L. and de Miranda Cardoso, José Vinícius and Reimer, Joscha and Harrington, Joseph and Rodríguez, Juan Luis Cano and Nunez-Iglesias, Juan and Kuczynski, Justin and Tritz, Kevin and Thoma, Martin and Newville, Matthew and Kümmerer, Matthias and Bolingbroke, Maximilian and Tartre, Michael and Pak, Mikhail and Smith, Nathaniel J. and Nowaczyk, Nikolai and Shebanov, Nikolay and Pavlyk, Oleksandr and Brodtkorb, Per A. and Lee, Perry and McGibbon, Robert T. and Feldbauer, Roman and Lewis, Sam and Tygier, Sam and Sievert, Scott and Vigna, Sebastiano and Peterson, Stefan and More, Surhud and Pudlik, Tadeusz and Oshima, Takuya and Pingel, Thomas J. and Robitaille, Thomas P. and Spura, Thomas and Jones, Thouis R. and Cera, Tim and Leslie, Tim and Zito, Tiziano and Krauss, Tom and Upadhyay, Utkarsh and Halchenko, Yaroslav O. and Vázquez-Baeza, Yoshiki and SciPy 1.0 Contributors},
+  title     = {SciPy 1.0: Fundamental Algorithms for Scientific Computing in Python},
+  journal   = {Nature Methods},
+  volume    = {17},
+  number    = {3},
+  pages     = {261--272},
+  year      = {2020},
+  doi       = {10.1038/s41592-019-0686-2},
+  url       = {https://doi.org/10.1038/s41592-019-0686-2}
+}
+
+% Работа по алгоритму differential evolution - алгоритма, который в итоге используется для поиска ранга для tucker и tensor-train
+@article{differential_evolution,
+  author    = {Storn, Rainer and Price, Kenneth},
+  title     = {Differential Evolution – A Simple and Efficient Heuristic for Global Optimization over Continuous Spaces},
+  journal   = {Journal of Global Optimization},
+  volume    = {11},
+  number    = {4},
+  pages     = {341--359},
+  year      = {1997},
+  doi       = {10.1023/A:1008202821328},
+  url       = {https://doi.org/10.1023/A:1008202821328}
+}
+
+% Работа по parafac, ссылка на нее была в методе parafac, tucker в tensorly
+@article{tensorly_parafac_tucker,
+    author = {Kolda, Tamara G. and Bader, Brett W.},
+    title = {Tensor Decompositions and Applications},
+    journal = {SIAM Review},
+    volume = {51},
+    number = {3},
+    pages = {455-500},
+    year = {2009},
+    doi = {10.1137/07070111X},
+    URL = {https://doi.org/10.1137/07070111X},
+    eprint = {https://doi.org/10.1137/07070111X}
+}
+
+% Работа по parafac, ссылка на нее была в методе parafac в tensorly
+@article{tensorly_parafac_2,
+title = {PARAFAC and missing values},
+journal = {Chemometrics and Intelligent Laboratory Systems},
+volume = {75},
+number = {2},
+pages = {163-180},
+year = {2005},
+issn = {0169-7439},
+doi = {https://doi.org/10.1016/j.chemolab.2004.07.003},
+url = {https://www.sciencedirect.com/science/article/pii/S0169743904001741},
+author = {Giorgio Tomasi and Rasmus Bro},
+keywords = {PARAFAC, Missing values, INDAFAC, Fluorescence}
+}
+
+% Работа по parafac, ссылка на нее была в методе parafac в tensorly
+@article{tensorly_parafac_3,
+author = {Bro, Rasmus},
+year = {2001},
+month = {08},
+pages = {},
+title = {Multiway analysis in the food industry. Models, algorithms and applications},
+journal = {Ph.D. dissertation, University of Amsterdam, Amsterdam}
+}
+
+% Работа по tensor-train, ссылка на нее была в методе tensor-train в tensorly
+@article{tensorly_tensor_train,
+    author = {Oseledets, I. V.},
+    title = {Tensor-Train Decomposition},
+    journal = {SIAM Journal on Scientific Computing},
+    volume = {33},
+    number = {5},
+    pages = {2295-2317},
+    year = {2011},
+    doi = {10.1137/090752286},
+    URL = {https://doi.org/10.1137/090752286},
+    eprint = {https://doi.org/10.1137/090752286}
+}
+
+% данные в 5 измерениях по чертам личности как перспективного для исследования типа тензора для продолжения работы
+@article{personality_types_data,
+    author = {Gerlach, Martin and Farb, Beatrice and Revelle, William and Amaral, Luís},
+    year = {2018},
+    month = {10},
+    pages = {1},
+    title = {A robust data-driven approach identifies four personality types across four large data sets},
+    volume = {2},
+    journal = {Nature Human Behaviour},
+    doi = {10.1038/s41562-018-0419-z}
+}
+
+% Про CPD
+@article{Hitchcock1927,
+    author = {Hitchcock, Frank L.},
+    title = {The Expression of a Tensor or a Polyadic as a Sum of Products},
+    journal = {Journal of Mathematics and Physics},
+    volume = {6},
+    number = {1-4},
+    pages = {164-189},
+    doi = {https://doi.org/10.1002/sapm192761164},
+    url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/sapm192761164},
+    eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/sapm192761164},
+    year = {1927}
+}
+
+% Про CPD
+@article{Carroll1970,
+  author    = {Carroll, J. Douglas and Chang, Jih-Jie},
+  title     = {Analysis of individual differences in multidimensional scaling via an n-way generalization of “Eckart-Young” decomposition},
+  journal   = {Psychometrika},
+  volume    = {35},
+  number    = {3},
+  pages     = {283--319},
+  year      = {1970},
+  doi       = {10.1007/BF02310791},
+  url       = {https://doi.org/10.1007/BF02310791}
+}
+
+% Тензорные вычисления (tensor, dense tensor)
+@book{tensor_calculus,
+  title={Tensor Calculus},
+  author={Synge, J.L. and Schild, A.},
+  isbn={9780486636122},
+  lccn={77094163},
+  series={(Dover books on Mathematics)},
+  url={https://books.google.ru/books?id=8vlGhlxqZjsC},
+  year={1978},
+  publisher={Dover Publications}
+}
+
+% sparse matrices (sparse tensor)
+@book{sparse_matrices,
+  title={Direct Methods for Sparse Matrices},
+  author={Duff, I.S. and Erisman, A.M. and Reid, J.K.},
+  isbn={9780198508380},
+  lccn={2016946839},
+  series={NUMERICAL MATHEMATICS AND SCIE},
+  url={https://books.google.ru/books?id=JhlLDgAAQBAJ},
+  year={2017},
+  publisher={Oxford University Press}
+}
+
+% картинка для объяснения тензора
+@online{tensor_image,
+  author = {Tai-Danae Bradley},
+  year = {2025},
+  title = {Matrices as Tensor Network Diagrams},
+  url = {https://www.math3ma.com/blog/matrices-as-tensor-network-diagrams},
+  note = {Accessed: March 30, 2025}
+}
+
+% картинка для объяснения формата sparse тензора (фигура 1)
+@article{sparse_tensor,
+  author    = {Dawon Ahn and Jun-Gi Jang and U. Kang},
+  title     = {Time-aware tensor decomposition for sparse tensors},
+  journal   = {Machine Learning},
+  year      = {2022},
+  volume    = {111},
+  number    = {4},
+  pages     = {1409--1430},
+  doi       = {10.1007/s10994-021-06059-7},
+  url       = {https://doi.org/10.1007/s10994-021-06059-7},
+  issn      = {1573-0565}
+}
+
+% картинка для объяснения форматов sparse и block sparse (фигура 3)
+@article{sparse_and_block_sparse_tensors,
+author = {he, Zhi and Li, Jun and Liu, Lin},
+year = {2016},
+month = {08},
+pages = {636},
+title = {Tensor Block-Sparsity Based Representation for Spectral-Spatial Hyperspectral Image Classification},
+volume = {8},
+journal = {Remote Sensing},
+doi = {10.3390/rs8080636}
+}
+
+% введение проклятья размерности
+@book{curse_of_dim,
+  added-at = {2011-08-17T16:08:47.000+0200},
+  author = {Bellman, Richard},
+  biburl = {https://www.bibsonomy.org/bibtex/29cdd821222218ded252c8ba5cd712666/pcbouman},
+  interhash = {acf948462171ca060064a7ded257a792},
+  intrahash = {9cdd821222218ded252c8ba5cd712666},
+  isbn = {9780486428093},
+  keywords = {book dynamic programming},
+  publisher = {Dover Publications},
+  timestamp = {2011-08-18T09:10:27.000+0200},
+  title = {{Dynamic Programming}},
+  year = 1957
+}
+
+% про Matrix Product State
+@article{mps,
+author = {Perez-Garcia, D. and Verstraete, F. and Wolf, M. M. and Cirac, J. I.},
+title = {Matrix product state representations},
+year = {2007},
+issue_date = {July 2007},
+publisher = {Rinton Press, Incorporated},
+address = {Paramus, NJ},
+volume = {7},
+number = {5},
+issn = {1533-7146},
+month = jul,
+pages = {401–430},
+numpages = {30}
+}
+
+% про DMRG алгоритм
+@article{dmrg,
+  title = {Density matrix formulation for quantum renormalization groups},
+  author = {White, Steven R.},
+  journal = {Phys. Rev. Lett.},
+  volume = {69},
+  issue = {19},
+  pages = {2863--2866},
+  numpages = {0},
+  year = {1992},
+  month = {11},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevLett.69.2863},
+  url = {https://link.aps.org/doi/10.1103/PhysRevLett.69.2863}
+}
+
+% MPS картинка
+@misc{mps_representation,
+  author    = "{tensornetwork.org contributors}",
+  title     = "{Matrix Product State / Tensor Train}",
+  year      = {2025},
+  url       = {https://tensornetwork.org/mps/index.html},
+  note      = "Accessed: 2025-04-01"
+}
+
+% Картинка с CP decomposition
+@article{cp_image,
+title = {Fast weighted CP decomposition for context-aware recommendation with explicit and implicit feedback},
+journal = {Expert Systems with Applications},
+volume = {204},
+pages = {117591},
+year = {2022},
+issn = {0957-4174},
+doi = {https://doi.org/10.1016/j.eswa.2022.117591},
+url = {https://www.sciencedirect.com/science/article/pii/S0957417422009034},
+author = {Jianli Zhao and Shidong Zheng and Huan Huo and Maoguo Gong and Tianheng Zhang and Lijun Qu},
+}
+
+% Введение метода tucker
+@article{tucker_method,
+title={Some Mathematical Notes on Three-Mode Factor Analysis}, 
+volume={31},
+DOI={10.1007/BF02289464},
+number={3},
+journal={Psychometrika},
+author={Tucker, Ledyard R},
+year={1966},
+pages={279–311}
+}
+
+% картинка tensor-train декомпозиции
+@article{tt_method_image,
+   title={Tensor train factorization under noisy and incomplete data with automatic rank estimation},
+   volume={141},
+   ISSN={0031-3203},
+   url={http://dx.doi.org/10.1016/j.patcog.2023.109650},
+   DOI={10.1016/j.patcog.2023.109650},
+   journal={Pattern Recognition},
+   publisher={Elsevier BV},
+   author={Xu, Le and Cheng, Lei and Wong, Ngai and Wu, Yik-Chung},
+   year={2023},
+   month=sep,
+   pages={109650}
+   }
+
+% tucker decomposition картинка 
+@article{tucker_method_image,
+AUTHOR = {Billiet, Lieven and Swinnen, Thijs and De Vlam, Kurt and Westhovens, Rene and Van Huffel, Sabine},
+TITLE = {Recognition of Physical Activities from a Single Arm-Worn Accelerometer: A Multiway Approach},
+JOURNAL = {Informatics},
+VOLUME = {5},
+YEAR = {2018},
+NUMBER = {2},
+ARTICLE-NUMBER = {20},
+URL = {https://www.mdpi.com/2227-9709/5/2/20},
+ISSN = {2227-9709},
+DOI = {10.3390/informatics5020020}
+}
+
+% картинка для метода RTPCA декомпозиции
+@article{rtpca_method_image,
+author = {Wang, Andong and Jin, Zhong and Yang, Jing-Yu},
+year = {2020},
+month = {12},
+pages = {},
+title = {A faster tensor robust PCA via tensor factorization},
+volume = {11},
+journal = {International Journal of Machine Learning and Cybernetics},
+doi = {10.1007/s13042-020-01150-2}
+}
+
+% RTPCA метод
+@misc{rtpca_method,
+      title={Tensor Robust Principal Component Analysis with A New Tensor Nuclear Norm}, 
+      author={Canyi Lu and Jiashi Feng and Yudong Chen and Wei Liu and Zhouchen Lin and Shuicheng Yan},
+      year={2019},
+      eprint={1804.03728},
+      archivePrefix={arXiv},
+      primaryClass={stat.ML},
+      url={https://arxiv.org/abs/1804.03728}, 
+}
+
+% Hybrid Tensor Decomposition in Neural Network Compression
+@article{hybrid_tensor_decomposition_c_nn,
+   title={Hybrid tensor decomposition in neural network compression},
+   volume={132},
+   ISSN={0893-6080},
+   url={http://dx.doi.org/10.1016/j.neunet.2020.09.006},
+   DOI={10.1016/j.neunet.2020.09.006},
+   journal={Neural Networks},
+   publisher={Elsevier BV},
+   author={Wu, Bijiao and Wang, Dingheng and Zhao, Guangshe and Deng, Lei and Li, Guoqi},
+   year={2020},
+   month=dec,
+   pages={309–320}
+   }
+
+% cross_tensor_approximation метод
+@article{cross_tensor_approximation,
+    author = {{Ahmadi-Asl}, Salman and {Caiafa}, Cesar F. and {Cichocki}, Andrzej and {Phan}, Anh Huy and {Tanaka}, Toshihisa and {Oseledets}, Ivan and {Wang}, Jun},
+    title = "{Cross Tensor Approximation Methods for Compression and Dimensionality Reduction}",
+    journal = {IEEE Access},
+    year = 2021,
+    month = jan,
+    volume = {9},
+    pages = {150809-150838},
+    doi = {10.1109/ACCESS.2021.3125069},
+    adsurl = {https://ui.adsabs.harvard.edu/abs/2021IEEEA...9o0809A},
+    adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+% фреймворк для сжатия моделей машинного обучения
+@misc{yin2021efficienttensordecompositionbaseddnn,
+      title={Towards Efficient Tensor Decomposition-Based DNN Model Compression with Optimization Framework}, 
+      author={Miao Yin and Yang Sui and Siyu Liao and Bo Yuan},
+      year={2021},
+      eprint={2107.12422},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2107.12422}, 
+}
+
+% про метод для улучшения tucker decomposition
+@INPROCEEDINGS{barron_loss_tensor_decomposition,
+  author={Mozaffari, Mahsa and Markopoulos, Panos P.},
+  booktitle={2021 55th Asilomar Conference on Signals, Systems, and Computers}, 
+  title={Robust Barron-Loss Tucker Tensor Decomposition}, 
+  year={2021},
+  volume={},
+  number={},
+  pages={1651-1655},
+  keywords={Resistance;Computers;Tensors;Approximation algorithms;Minimization;Approximation error;Robustness},
+  doi={10.1109/IEEECONF53345.2021.9723232}
+  }
+  
+% barron loss
+@misc{barron2019generaladaptiverobustloss,
+      title={A General and Adaptive Robust Loss Function}, 
+      author={Jonathan T. Barron},
+      year={2019},
+      eprint={1701.03077},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/1701.03077}, 
+}
+
+% Time-aware tensor decomposition for sparse tensors для literature review
+@article{time_aware_tensor_decomposition,
+  author = {Dawon Ahn and Jun-Gi Jang and U. Kang},
+  title = {Time-aware tensor decomposition for sparse tensors},
+  journal = {Machine Learning},
+  volume = {111},
+  number = {4},
+  pages = {1409--1430},
+  year = {2022},
+  doi = {10.1007/s10994-021-06059-7},
+  url = {https://doi.org/10.1007/s10994-021-06059-7},
+  issn = {1573-0565},
+  date = {2022-04-01}
+}
+
+% Источник, откуда был взят первый ЭЭГ тензор - EEG Motor Movement/Imagery Dataset
+@article{Schalk2004BCI2000,
+  author = {Schalk, G. and McFarland, D. J. and Hinterberger, T. and Birbaumer, N. and Wolpaw, J. R.},
+  title = {BCI2000: a general-purpose brain-computer interface (BCI) system},
+  journal = {IEEE Transactions on Biomedical Engineering},
+  year = {2004},
+  volume = {51},
+  number = {6},
+  pages = {1034--1043},
+  doi = {10.1109/TBME.2004.827072},
+  pmid = {15188875},
+  month = jun
+}
+
+% про алгоритмы координатного спуска (основа для кастомного алгоритма поиска локального минимума в задаче поиска оптимального ранга)
+@article{coordinate_descent_algs,
+  author    = {Stephen J. Wright},
+  title     = {Coordinate descent algorithms},
+  journal   = {Mathematical Programming},
+  year      = {2015},
+  volume    = {151},
+  number    = {1},
+  pages     = {3--34},
+  doi       = {10.1007/s10107-015-0892-3},
+  url       = {https://doi.org/10.1007/s10107-015-0892-3},
+  issn      = {1436-4646}
+}
