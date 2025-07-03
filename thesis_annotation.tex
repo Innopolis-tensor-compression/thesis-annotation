@@ -118,28 +118,58 @@
 
 \usepackage{placeins} % for \FloatBarrier
 
-\pagestyle{fancyplain}
+% \pagestyle{fancyplain}
 
-% remember section title
-\renewcommand{\chaptermark}[1]%
-	{\markboth{\chaptername~\thechapter~--~#1}{}}
+% % remember section title
+% \renewcommand{\chaptermark}[1]%
+% 	{\markboth{\chaptername~\thechapter~--~#1}{}}
 
-% subsection number and title
-\renewcommand{\sectionmark}[1]%
-	{\markright{\thesection\ #1}}
+% % subsection number and title
+% \renewcommand{\sectionmark}[1]%
+% 	{\markright{\thesection\ #1}}
 
-\rhead[\fancyplain{}{\bf\leftmark}]%
-      {\fancyplain{}{\bf\thepage}}
-\lhead[\fancyplain{}{\bf\thepage}]%
-      {\fancyplain{}{\bf\rightmark}}
-\cfoot{} %bfseries
+% \rhead[\fancyplain{}{\bf\leftmark}]%
+%       {\fancyplain{}{\bf\thepage}}
+% \lhead[\fancyplain{}{\bf\thepage}]%
+%       {\fancyplain{}{\bf\rightmark}}
+% \cfoot{} %bfseries
 
+
+% ---------- Основной стиль (глава + секция) ----------
+\pagestyle{fancy}
+\setlength{\headheight}{40pt}
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+\fancyhf{}
+\fancyhead[L]{\bfseries\leftmark}   % слева — название главы
+\fancyhead[R]{\thepage}             % справа сверху — номер страницы
+\fancyfoot[C]{}                     % снизу — пусто
+\renewcommand{\headrulewidth}{0.4pt}
+
+% ---------- Стиль plain (первая страница главы и списков) ----------
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \fancyfoot[C]{}
+  \renewcommand{\headrulewidth}{0pt}
+}
+
+% ---------- Стиль front (Contents, Lists, Abstract) ----------
+\fancypagestyle{front}{%
+  \fancyhf{}
+  \fancyhead[L]{\bfseries\leftmark}
+  \fancyhead[R]{\thepage}           % номер страницы справа сверху
+  \fancyfoot[C]{}
+  \renewcommand{\headrulewidth}{0.4pt}
+}
 
 \newcommand{\dedication}[1]
    {\thispagestyle{empty}
      
    \begin{flushleft}\raggedleft #1\end{flushleft}
 }
+
 
 \addto\captionsenglish{\renewcommand{\contentsname}{Оглавление}}
 
