@@ -9,8 +9,8 @@
 \begingroup
 \sloppy
 \begin{itemize}\setlength\itemsep{0.25em}
-    \item Разложение с названиями Canonical Decomposition (CANDECOMP), Canonical Polyadic Decomposition (CPD/CP) и Parallel Factor Analysis (PARAFAC)~\cite{Hitchcock1927, Carroll1970} аппроксимирует тензор суммой рангов-1, обеспечивая структурную интерпретируемость при условной уникальности представления.
-    \item Tucker/HOSVD~\cite{tucker_method} разлагает тензор на компактное ядро \( \mathcal{G} \) и матрицы факторов \(\{A_n\}\) со свободными рангами \(R_n\) по модам. Гибкость даёт высокую точность и возможности денойзинга, но порождает неоднозначность факторов и сложность подбора рангов.
+    \item Разложение с названиями Canonical Decomposition (CANDECOMP), Canonical Polyadic Decomposition (CPD/CP) и Parallel Factor Analysis (PARAFAC) аппроксимирует тензор суммой рангов-1, обеспечивая структурную интерпретируемость при условной уникальности представления.
+    \item Tucker/HOSVD разлагает тензор на компактное ядро \( \mathcal{G} \) и матрицы факторов \(\{A_n\}\) со свободными рангами \(R_n\) по модам. Гибкость даёт высокую точность и возможности денойзинга, но порождает неоднозначность факторов и сложность подбора рангов.
     \item Tensor-Train (TT)~\cite{tensorly_tensor_train} хранит данные цепочкой ядер и TT-рангов, переводя экспоненциальную сложность в линейную по порядку \(d\).
 \end{itemize}
 \endgroup
@@ -18,17 +18,17 @@
 \subsection*{Современные расширения классических методов}
 
 \begin{itemize}\setlength\itemsep{0.25em}
-    \item Robust Barron-Loss Tucker~\cite{barron_loss_tensor_decomposition} заменяет норму Фробениуса обобщённой Barron-функцией потерь, уменьшая влияние выбросов при сохранении управляемости гладкостью.
-    \item RTPCA~\cite{rtpca_method} сочетает ядерную норму и $\ell_1$-штраф для разделения низкоранговой структуры и разреженных выбросов. Используется для избавления от шума в тензорах.
+    \item Robust Barron-Loss Tucker заменяет норму Фробениуса обобщённой Barron-функцией потерь, уменьшая влияние выбросов при сохранении управляемости гладкостью.
+    \item RTPCA сочетает ядерную норму и $\ell_1$-штраф для разделения низкоранговой структуры и разреженных выбросов. Используется для избавления от шума в тензорах.
 \end{itemize}
 
 \subsection*{Релевантные исследованные работы}
 
 \begin{itemize}\setlength\itemsep{0.25em}
-    \item \emph{Stable Low-rank Decomposition} \cite{stable_low_rank_tensor_decomposition} объединяет CP и Tucker методы декомпозиции для аппроксимации сверточных слоев нейронных сетей.
+    \item \emph{Stable Low-rank Decomposition}  объединяет CP и Tucker методы декомпозиции для аппроксимации сверточных слоев нейронных сетей.
     \item
-    \emph{Hybrid TT + Hierarchical Tucker} \cite{hybrid_tensor_decomposition_c_nn} показывает, что разные форматы оптимальны для свёрточных и полносвязных слоёв соответственно.
-    \item Оптимизационные фреймворки~\cite{yin2021efficienttensordecompositionbaseddnn} объединяют ADDM-регуляризацию, TT-разложение и дообучение, позволяя либо повысить точность, либо добиться экстремальных коэффициентов сжатия.
-    \item \emph{Cross Tensor Approximation} (CTA) \cite{cross_tensor_approximation} обходит полную SVD, используя выборку срезов/фибр и малое ядро; обеспечивает скорость и малый объём памяти для гиперспектральных и EEG-тензоров.
-    \item \emph{Time-aware tensor decomposition for sparse tensors} \cite{time_aware_tensor_decomposition} вводят динамический штраф по временной моде, сочетая аналитическое и итеративное обновления матриц факторов для эволюционирующих данных.
+    \emph{Hybrid TT + Hierarchical Tucker} показывает, что разные форматы оптимальны для свёрточных и полносвязных слоёв соответственно.
+    \item Оптимизационные фреймворки объединяют ADDM-регуляризацию, TT-разложение и дообучение, позволяя либо повысить точность, либо добиться экстремальных коэффициентов сжатия.
+    \item \emph{Cross Tensor Approximation} (CTA) обходит полную SVD, используя выборку срезов/фибр и малое ядро; обеспечивает скорость и малый объём памяти для гиперспектральных и EEG-тензоров.
+    \item \emph{Time-aware tensor decomposition for sparse tensors} вводят динамический штраф по временной моде, сочетая аналитическое и итеративное обновления матриц факторов для эволюционирующих данных.
 \end{itemize}
